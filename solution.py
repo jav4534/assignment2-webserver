@@ -15,16 +15,16 @@ def webServer(port=13331):
 
   while True:
     #Establish the connection
-    print('Ready to serve...')
+    #print('Ready to serve...')
     connectionSocket, addr = serverSocket.accept()#Fill in start      #Fill in end
     response = ""
     try:
 
       try:
         request = connectionSocket.recv(1024).decode()#Fill in start    #Fill in end
-        print(request)
+        #print(request)
         filename = request.split()[1]
-        print(filename)
+        #print(filename)
         f = open(filename[1:])
         content = f.read(1024)#Fill in start     #Fill in end
         
